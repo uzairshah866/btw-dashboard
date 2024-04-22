@@ -26,12 +26,11 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
         justifyContent: "space-between",
         color: selected ? colors.primary : colors.white,
         backgroundColor: selected ? colors.white : colors.transparent,
-        py: 2,
+        py: 1.5,
         px: 2,
         fontSize: 14,
         cursor: "pointer",
         borderRadius: 2,
-        width: "90%",
       }}
     >
       <div style={{ display: "flex", alignItems: "center" }}>
@@ -98,9 +97,8 @@ const Sidebar: React.FC<SidebarProps> = ({
           color: colors.white,
           borderTop: `1px solid ${colors.white}`,
           borderBottom: `1px solid ${colors.white}`,
-          py: 2,
-          width: "90%",
-          mt: 20,
+          py: 1.5,
+          mt: 10,
         }}
       >
         <AccountCircleOutlinedIcon sx={{ mr: 1 }} /> Profile Management
