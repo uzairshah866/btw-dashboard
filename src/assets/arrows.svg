@@ -1,0 +1,18 @@
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="58"
+              viewBox="0 0 48 58"
+              fill="none"
+            >
+              <path
+                opacity="0.1"
+                d="M23.7624 15.9707L44.3412 47.4924H3.18356L23.7624 15.9707Z"
+                fill="white"
+              />
+              <path
+                opacity="0.1"
+                d="M24.2389 0L44.8178 31.5217H3.66012L24.2389 0Z"
+                fill="white"
+              />
+            </svg>
