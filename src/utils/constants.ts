@@ -73,3 +73,91 @@ export const PROFILE_TABS = [
     "GMB 5 Profile",
     "GMB 6 Profile",
 ]
+/** reviews chart data */
+export const REVIEWS_CHART_DATA = {
+    chart: {
+        type: "donut",
+    },
+    labels: ["star 1", "star 2", "star 3", "star 4", "star 5"],
+    plotOptions: {
+        pie: {
+            colors: ["#FF902A", "#FACF55", "#FF0000", "#6758F3", "#34AA44"],
+            donut: {
+                size: "70%",
+                labels: {
+                    show: true,
+                    total: {
+                        show: true,
+                        label: "",
+                        formatter: () => "100%",
+                    },
+                },
+            },
+        },
+    },
+    responsive: [
+        {
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200,
+                },
+                legend: {
+                    position: "bottom",
+                },
+            },
+        },
+    ],
+    fill: {
+        colors: ["#FF902A", "#FACF55", "#FF0000", "#6758F3", "#34AA44"],
+    },
+    colors: ["#FF902A", "#FACF55", "#FF0000", "#6758F3", "#34AA44"],
+    dataLabels: {
+        enabled: false,
+    },
+}
+/** ratings chart data */
+export const RATINGS_CHART_DATA = {
+    chart: {
+        type: "donut",
+    },
+    labels: ["current percentage", "overall percentage"],
+    plotOptions: {
+        pie: {
+            colors: ["#D39890", "#E3E3E3"],
+            donut: {
+                customScale: 0.8,
+                offsetX: -30,
+                size: "70%",
+                labels: {
+                    show: true,
+                    total: {
+                        show: true,
+                        label: "",
+                        formatter: () => "4.1",
+                    },
+                },
+            },
+        },
+    },
+    responsive: [
+        {
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200,
+                },
+                legend: {
+                    position: "bottom",
+                },
+            },
+        },
+    ],
+    fill: {
+        colors: ["#D39890", "#E3E3E3"],
+    },
+    colors: ["#D39890", "#E3E3E3"],
+    dataLabels: {
+        enabled: false,
+    },
+}

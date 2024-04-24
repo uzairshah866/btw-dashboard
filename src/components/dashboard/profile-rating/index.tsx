@@ -11,6 +11,7 @@ export default function ProfileRating() {
           <div className={styles.label}>Profile Rating</div>
           <CustomSelect />
         </div>
+
         <Chart />
       </div>
     </div>

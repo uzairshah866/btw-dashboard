@@ -1,54 +1,24 @@
-import React from "react";
-import CustomChart from "../../shared/chart";
+import React, { useState } from "react";
+import ReactApexChart from "react-apexcharts";
+import { RATINGS_CHART_DATA } from "../../../utils/constants";
 
-const Chart: React.FC = () => {
-  const options = {
-    height: 300,
-    animationEnabled: true,
-    subtitles: [
-      {
-        text: "4.1",
-        verticalAlign: "center",
-        fontSize: 42,
-        dockInsidePlotArea: true,
-        fontColor: "#D39890",
-      },
-    ],
-    data: [
-      {
-        startAngle: 270,
-        type: "doughnut",
-        showInLegend: true,
-        // indexLabel: "{name}: {y}",
-        yValueFormatString: "#,###'%'",
-        dataPoints: [
-          {
-            name: "Overall Percentage",
-            y: 89,
-            color: "#E3E3E3",
-          },
-          {
-            name: "Current Percentage",
-            y: 11,
-            exploded: true,
-            color: "#D39890",
-          },
-        ],
-      },
-    ],
-    legend: {
-      verticalAlign: "center",
-      horizontalAlign: "right",
-      reversed: true,
-      cursor: "pointer",
-    },
-  };
+const ApexChart: React.FC = () => {
+  const [series] = useState<number[]>([11, 89]);
+  const [options] = useState<Object>(RATINGS_CHART_DATA);
 
   return (
     <div>
-      <CustomChart options={options} />
+      <div id="chart">
+        <ReactApexChart
+          options={options}
+          series={series}
+          type="donut"
+          height={340}
+        />
+      </div>
+      <div id="html-dist"></div>
     </div>
   );
 };
 
-export default Chart;
+export default ApexChart;

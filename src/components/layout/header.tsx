@@ -1,10 +1,8 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Menu from "@mui/material/Menu";
 import AppBar from "@mui/material/AppBar";
 import { colors } from "../../utils/colors";
 import Toolbar from "@mui/material/Toolbar";
-import MenuItem from "@mui/material/MenuItem";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import {
@@ -15,42 +13,6 @@ import {
 } from "../../utils/icons";
 
 const Header = () => {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-
-  const isMenuOpen = Boolean(anchorEl);
-
-  const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
-
-  const menuId = "primary-search-account-menu";
-  /** user menu */
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-      sx={{ mt: 5 }}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  );
-
   return (
     <Box sx={{ flexGrow: 1 }}>
       {/* sticky navbar */}
@@ -92,7 +54,6 @@ const Header = () => {
             </IconButton>
             <Typography
               component="div"
-              onClick={handleProfileMenuOpen}
               sx={{
                 border: `1px solid ${colors.divider}`,
                 borderRadius: 3,
@@ -113,8 +74,6 @@ const Header = () => {
           </Box>
         </Toolbar>
       </AppBar>
-
-      {renderMenu}
     </Box>
   );
 };
